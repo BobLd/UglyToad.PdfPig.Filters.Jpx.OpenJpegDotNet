@@ -1,0 +1,74 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;net462;net471;net6.0;net8.0</TargetFrameworks>
+		<LangVersion>12</LangVersion>
+		<Version>0.1.10.1-alpha001</Version>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<Platforms>AnyCPU;x64;x86</Platforms>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Authors>BobLd</Authors>
+		<PackageTags>PDF;Reader;Document;Adobe;PDFBox;PdfPig;pdf;file;C#;dotnet;.NET;image;jpx;jpeg;jpeg-2000</PackageTags>
+		<RepositoryUrl>https://github.com/BobLd/UglyToad.PdfPig.Filters.Jpx.OpenJpegDotNet</RepositoryUrl>
+		<PackageProjectUrl>https://github.com/BobLd/UglyToad.PdfPig.Filters.Jpx.OpenJpegDotNet</PackageProjectUrl>
+		<Description>PdfPig implementation of the JPX (Jpeg2000) filter, based on OpenJpegDotNet.</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageId>PdfPig.Filters.Jpx.OpenJpegDotNet</PackageId>
+		<Title>PdfPig.Filters.Jpx.OpenJpegDotNet</Title>
+		<Product>PdfPig.Filters.Jpx.OpenJpegDotNet</Product>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<PackageIcon>pdfpig.png</PackageIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\documentation\pdfpig.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="runtimes\win-x64\native\OpenJpegDotNetNative.dll" Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+		</Content>
+
+		<!--
+		<Content Include="runtimes\win-x86\native\OpenJpegDotNetNative.dll" Condition="$([MSBuild]::IsOSPlatform('Windows')) AND '$(Platform)' == 'x86'">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		-->
+
+		<Content Include="runtimes\linux-x64\native\libOpenJpegDotNetNative.so" Condition="$([MSBuild]::IsOSPlatform('Linux'))">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+		</Content>
+
+		<Content Include="runtimes\osx-x64\native\libOpenJpegDotNetNative.dylib" Condition="$([MSBuild]::IsOSPlatform('OSX'))">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="runtimes\win-x86\native\OpenJpegDotNetNative.dll" Pack="true" PackagePath="runtimes/win-x86/native/" />
+		<None Include="runtimes\linux-x64\native\libOpenJpegDotNetNative.so" Pack="true" PackagePath="runtimes/linux-x64/native/" />
+		<None Include="runtimes\osx-x64\native\libOpenJpegDotNetNative.dylib" Pack="true" PackagePath="runtimes/osx-x64/native/" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="PdfPig" Version="0.1.10-alpha-20250208-1660c" />
+	</ItemGroup>
+
+</Project>

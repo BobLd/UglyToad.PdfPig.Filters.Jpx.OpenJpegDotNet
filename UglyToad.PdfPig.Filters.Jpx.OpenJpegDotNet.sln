@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenJpegDotNet.Tests", "OpenJpegDotNet.Tests\OpenJpegDotNet.Tests.csproj", "{7FE25AD2-9F87-47D5-96ED-5B2001260529}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyToad.PdfPig.Filters.Jpx.OpenJpeg", "UglyToad.PdfPig.Filters.Jpx.OpenJpeg\UglyToad.PdfPig.Filters.Jpx.OpenJpeg.csproj", "{A0C4F632-61F4-49D1-B975-81763413D249}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UglyToad.PdfPig.Filters.Jpx.OpenJpeg.Tests", "UglyToad.PdfPig.Filters.Jpx.OpenJpeg.Tests\UglyToad.PdfPig.Filters.Jpx.OpenJpeg.Tests.csproj", "{CD7B6805-06A9-46B0-B751-10AB62823B28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM32 = Debug|ARM32
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM32 = Release|ARM32
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|ARM32.ActiveCfg = Debug|ARM32
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|ARM32.Build.0 = Debug|ARM32
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|ARM64.Build.0 = Debug|ARM64
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|x64.ActiveCfg = Debug|x64
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|x64.Build.0 = Debug|x64
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|x86.ActiveCfg = Debug|x86
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Debug|x86.Build.0 = Debug|x86
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|ARM32.ActiveCfg = Release|ARM32
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|ARM32.Build.0 = Release|ARM32
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|ARM64.ActiveCfg = Release|ARM64
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|ARM64.Build.0 = Release|ARM64
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|x64.ActiveCfg = Release|x64
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|x64.Build.0 = Release|x64
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|x86.ActiveCfg = Release|x86
+		{7FE25AD2-9F87-47D5-96ED-5B2001260529}.Release|x86.Build.0 = Release|x86
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|ARM32.ActiveCfg = Debug|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|ARM32.Build.0 = Debug|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|x64.ActiveCfg = Debug|x64
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|x64.Build.0 = Debug|x64
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|x86.ActiveCfg = Debug|x86
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Debug|x86.Build.0 = Debug|x86
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|ARM32.ActiveCfg = Release|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|ARM32.Build.0 = Release|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|ARM64.Build.0 = Release|Any CPU
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|x64.ActiveCfg = Release|x64
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|x64.Build.0 = Release|x64
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|x86.ActiveCfg = Release|x86
+		{A0C4F632-61F4-49D1-B975-81763413D249}.Release|x86.Build.0 = Release|x86
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|ARM32.ActiveCfg = Debug|Any CPU
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|ARM32.Build.0 = Debug|Any CPU
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|ARM64.Build.0 = Debug|ARM64
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|x64.ActiveCfg = Debug|x64
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|x64.Build.0 = Debug|x64
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|x86.ActiveCfg = Debug|x86
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Debug|x86.Build.0 = Debug|x86
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|ARM32.ActiveCfg = Release|Any CPU
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|ARM32.Build.0 = Release|Any CPU
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|ARM64.ActiveCfg = Release|ARM64
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|ARM64.Build.0 = Release|ARM64
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|x64.ActiveCfg = Release|x64
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|x64.Build.0 = Release|x64
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|x86.ActiveCfg = Release|x86
+		{CD7B6805-06A9-46B0-B751-10AB62823B28}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
