@@ -3,7 +3,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>netstandard2.0;net462;net471;net6.0;net8.0</TargetFrameworks>
 		<LangVersion>12</LangVersion>
-		<Version>0.1.10.1-alpha001</Version>
+		<Version>0.1.10.1-alpha002</Version>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
@@ -63,6 +63,7 @@
 
 	<ItemGroup>
 		<None Include="runtimes\win-x86\native\OpenJpegDotNetNative.dll" Pack="true" PackagePath="runtimes/win-x86/native/" />
+		<None Include="runtimes\win-x64\native\OpenJpegDotNetNative.dll" Pack="true" PackagePath="runtimes/win-x64/native/" />
 		<None Include="runtimes\linux-x64\native\libOpenJpegDotNetNative.so" Pack="true" PackagePath="runtimes/linux-x64/native/" />
 		<None Include="runtimes\osx-x64\native\libOpenJpegDotNetNative.dylib" Pack="true" PackagePath="runtimes/osx-x64/native/" />
 	</ItemGroup>
