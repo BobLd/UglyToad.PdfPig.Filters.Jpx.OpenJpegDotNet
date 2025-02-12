@@ -42,18 +42,36 @@
 		</None>
 	</ItemGroup>
 
-	<ItemGroup>
-		<Content Include="runtimes\win-x64\native\OpenJpegDotNetNative.dll" Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+	<ItemGroup Condition="'$(Configuration)' == 'Debug'">
+		<Content Include="runtimes\win-x64\native\OpenJpegDotNetNative.dll">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
 		</Content>
 
 		<!--
-		<Content Include="runtimes\win-x86\native\OpenJpegDotNetNative.dll" Condition="$([MSBuild]::IsOSPlatform('Windows')) AND '$(Platform)' == 'x86'">
+		<Content Include="runtimes\win-x86\native\OpenJpegDotNetNative.dll">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
 		</Content>
 		-->
 
+		<Content Include="runtimes\linux-x64\native\libOpenJpegDotNetNative.so">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+		</Content>
+
+		<Content Include="runtimes\osx-x64\native\libOpenJpegDotNetNative.dylib">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(Configuration)' == 'Release'">
+		<Content Include="runtimes\win-x64\native\OpenJpegDotNetNative.dll" Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
+		</Content>
+		
 		<Content Include="runtimes\linux-x64\native\libOpenJpegDotNetNative.so" Condition="$([MSBuild]::IsOSPlatform('Linux'))">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 			<Link>%(RecursiveDir)%(FileName)%(Extension)</Link>
