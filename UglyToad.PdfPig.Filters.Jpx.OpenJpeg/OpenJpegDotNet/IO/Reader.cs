@@ -4,7 +4,6 @@ namespace OpenJpegDotNet.IO
 {
     public sealed class Reader : IDisposable
     {
-
         #region Fields
 
         private readonly Buffer _Buffer;
@@ -29,7 +28,7 @@ namespace OpenJpegDotNet.IO
 
         #region Constructors
 
-        public Reader(byte[] data)
+        public Reader(ReadOnlySpan<byte> data)
         {
             this._Buffer = new Buffer
             {
@@ -38,7 +37,10 @@ namespace OpenJpegDotNet.IO
                 Position = 0
             };
 
-            Marshal.Copy(data, 0, this._Buffer.Data, this._Buffer.Length);
+            for (int i = 0; i < data.Length; ++i)
+            {
+                Marshal.WriteByte(this._Buffer.Data + i, data[i]);
+            }
 
             var size = Marshal.SizeOf(this._Buffer);
             this._UserData = Marshal.AllocHGlobal(size);

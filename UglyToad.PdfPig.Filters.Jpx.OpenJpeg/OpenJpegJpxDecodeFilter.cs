@@ -17,9 +17,7 @@ namespace UglyToad.PdfPig.Filters.Jpx.OpenJpeg
         /// <inheritdoc/>
         public ReadOnlyMemory<byte> Decode(ReadOnlySpan<byte> input, DictionaryToken streamDictionary, int filterIndex)
         {
-            byte[] image = input.ToArray();
-
-            using (var reader = new OpenJpegDotNet.IO.Reader(image))
+            using (var reader = new OpenJpegDotNet.IO.Reader(input))
             {
                 if (!reader.ReadHeader(CodecFormat.Jp2))
                 {

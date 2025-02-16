@@ -33,7 +33,7 @@ namespace UglyToad.PdfPig.Filters.Jpx.OpenJpeg.Tests
 
                         Assert.True(pdfImage.TryGetPng(out var bytes));
 
-                        File.WriteAllBytes($"image_{i++}.jp2", bytes); // Can open with Gimp
+                        File.WriteAllBytes($"image_{i++}.png", bytes);
                     }
                 }
             }
