@@ -69,7 +69,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="PdfPig" Version="0.1.10-alpha-20250208-1660c" />
+		<PackageReference Include="PdfPig" Version="0.1.10-alpha-20250222-c4a23" />
 	</ItemGroup>
 
 </Project>
