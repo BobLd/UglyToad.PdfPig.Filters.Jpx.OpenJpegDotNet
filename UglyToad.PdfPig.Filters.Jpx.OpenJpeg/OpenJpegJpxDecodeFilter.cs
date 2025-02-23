@@ -15,7 +15,7 @@ namespace UglyToad.PdfPig.Filters.Jpx.OpenJpeg
         public bool IsSupported => true;
 
         /// <inheritdoc/>
-        public ReadOnlyMemory<byte> Decode(ReadOnlySpan<byte> input, DictionaryToken streamDictionary, int filterIndex)
+        public ReadOnlyMemory<byte> Decode(ReadOnlySpan<byte> input, DictionaryToken streamDictionary, IFilterProvider filterProvider, int filterIndex)
         {
             using (var reader = new OpenJpegDotNet.IO.Reader(input))
             {
