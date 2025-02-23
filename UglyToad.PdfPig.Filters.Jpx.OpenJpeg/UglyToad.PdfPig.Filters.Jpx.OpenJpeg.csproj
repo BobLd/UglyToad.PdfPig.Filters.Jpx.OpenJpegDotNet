@@ -12,6 +12,10 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
+		<IsAotCompatible Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">true</IsAotCompatible>
+	</PropertyGroup>
+
+	<PropertyGroup>
 		<Authors>BobLd</Authors>
 		<PackageTags>PDF;Reader;Document;Adobe;PDFBox;PdfPig;pdf;file;C#;dotnet;.NET;image;jpx;jpeg;jpeg-2000</PackageTags>
 		<RepositoryUrl>https://github.com/BobLd/UglyToad.PdfPig.Filters.Jpx.OpenJpegDotNet</RepositoryUrl>
