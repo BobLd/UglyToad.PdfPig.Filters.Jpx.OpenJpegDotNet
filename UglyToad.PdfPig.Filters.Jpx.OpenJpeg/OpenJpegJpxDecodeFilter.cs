@@ -18,10 +18,10 @@ namespace UglyToad.PdfPig.Filters.Jpx.OpenJpeg
         /// <inheritdoc/>
         public ReadOnlyMemory<byte> Decode(ReadOnlySpan<byte> input, DictionaryToken streamDictionary, IFilterProvider filterProvider, int filterIndex)
         {
+            var codecFormat = GetCodecFormat(input);
+
             using (var reader = new OpenJpegDotNet.IO.Reader(input))
             {
-                var codecFormat = GetCodecFormat(input);
-
                 if (!reader.ReadHeader(codecFormat))
                 {
                     throw new InvalidDataException($"Invalid JPEG 2000 (JPF filter) data: Could not read '{codecFormat}' header.");
