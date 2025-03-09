@@ -234,7 +234,7 @@ namespace OpenJpegDotNet
                                     {
                                         fixed (byte* dst = &raw[0])
                                         {
-                                            var stride = (int)(width * channel);
+                                            var stride = (int)width;
                                             for (var y = 0; y < height; y++)
                                             {
                                                 var src = IntPtr.Add(planes, (int)(y * width));
@@ -258,9 +258,15 @@ namespace OpenJpegDotNet
                                             {
                                                 for (var x = 0; x < width; x++)
                                                 {
+                                                    /*
                                                     pDest[2] = pSrc[0];
                                                     pDest[1] = pSrc[0 + size];
                                                     pDest[0] = pSrc[0 + size * 2];
+                                                    */
+
+                                                    pDest[0] = pSrc[0];
+                                                    pDest[1] = pSrc[0 + size];
+                                                    pDest[2] = pSrc[0 + size * 2];
 
                                                     pSrc += 1;
                                                     pDest += channel;
@@ -283,10 +289,16 @@ namespace OpenJpegDotNet
                                             {
                                                 for (var x = 0; x < width; x++)
                                                 {
-                                                    pDest[3] = alpha ? pSrc[0 + size * 3] : (byte)255;
+                                                    /*
                                                     pDest[2] = pSrc[0];
                                                     pDest[1] = pSrc[0 + size];
                                                     pDest[0] = pSrc[0 + size * 2];
+                                                    */
+
+                                                    pDest[0] = pSrc[0];
+                                                    pDest[1] = pSrc[0 + size];
+                                                    pDest[2] = pSrc[0 + size * 2];
+                                                    pDest[3] = alpha ? pSrc[0 + size * 3] : (byte)255;
 
                                                     pSrc += 1;
                                                     pDest += channel;
