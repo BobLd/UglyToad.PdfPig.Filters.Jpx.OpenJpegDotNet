@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/UglyToad.PdfPig.Filters.Jpx.OpenJpeg.Tests/jpx_files.txt

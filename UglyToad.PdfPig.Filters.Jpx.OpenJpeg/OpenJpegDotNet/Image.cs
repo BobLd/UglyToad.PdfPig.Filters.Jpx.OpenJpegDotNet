@@ -302,6 +302,7 @@ namespace OpenJpegDotNet
 
                         break;
                     default:
+                        // 16bit depth: GHOSTSCRIPT-696875-1.pdf
                         throw new NotSupportedException($"Unsupported pixel depth: ${pixel}.");
                 }
             }
