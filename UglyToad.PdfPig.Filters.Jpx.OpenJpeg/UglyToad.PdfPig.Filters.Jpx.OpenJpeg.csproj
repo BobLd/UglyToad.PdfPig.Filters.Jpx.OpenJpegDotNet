@@ -29,6 +29,8 @@
 		<Product>PdfPig.Filters.Jpx.OpenJpegDotNet</Product>
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
 		<PackageIcon>pdfpig.png</PackageIcon>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>UglyToad.PdfPig.Filters.Jpx.OpenJpeg.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
 
 	<ItemGroup>
