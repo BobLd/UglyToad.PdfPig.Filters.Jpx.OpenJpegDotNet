@@ -16,11 +16,11 @@ namespace UglyToad.PdfPig.Filters.Jpx.OpenJpeg
         public bool IsSupported => true;
 
         /// <inheritdoc/>
-        public ReadOnlyMemory<byte> Decode(ReadOnlySpan<byte> input, DictionaryToken streamDictionary, IFilterProvider filterProvider, int filterIndex)
+        public Memory<byte> Decode(Memory<byte> input, DictionaryToken streamDictionary, IFilterProvider filterProvider, int filterIndex)
         {
-            var codecFormat = GetCodecFormat(input);
+            var codecFormat = GetCodecFormat(input.Span);
 
-            using (var reader = new OpenJpegDotNet.IO.Reader(input))
+            using (var reader = new OpenJpegDotNet.IO.Reader(input.Span))
             {
                 if (!reader.ReadHeader(codecFormat))
                 {
