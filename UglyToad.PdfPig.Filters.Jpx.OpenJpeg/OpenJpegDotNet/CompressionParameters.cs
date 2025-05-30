@@ -5,7 +5,7 @@ namespace OpenJpegDotNet
     /// <summary>
     /// Defines the compression parameters. This class cannot be inherited.
     /// </summary>
-    public sealed class CompressionParameters : OpenJpegObject
+    internal sealed class CompressionParameters : OpenJpegObject
     {
 
         #region Constructors

@@ -5,7 +5,7 @@ namespace OpenJpegDotNet
     /// <summary>
     /// Defines the image data and characteristics. This class cannot be inherited.
     /// </summary>
-    public sealed class Image : OpenJpegObject
+    internal sealed class Image : OpenJpegObject
     {
 
         #region Constructors

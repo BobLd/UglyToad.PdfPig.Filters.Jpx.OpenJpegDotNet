@@ -6,7 +6,7 @@ namespace OpenJpegDotNet
     /// <summary>
     /// A stream that represents a JPEG 2000. This class cannot be inherited.
     /// </summary>
-    public sealed class Stream : OpenJpegObject
+    internal sealed class Stream : OpenJpegObject
     {
 
         #region Constructors

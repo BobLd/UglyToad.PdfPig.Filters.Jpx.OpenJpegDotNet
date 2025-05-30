@@ -2,7 +2,7 @@
 
 namespace OpenJpegDotNet.IO
 {
-    public sealed class Reader : IDisposable
+    internal sealed class Reader : IDisposable
     {
         #region Fields
 

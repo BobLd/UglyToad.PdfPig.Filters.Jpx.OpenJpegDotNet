@@ -2,7 +2,7 @@ using System.Runtime.InteropServices;
 
 namespace OpenJpegDotNet
 {
-    public sealed class DelegateHandler<T>
+    internal sealed class DelegateHandler<T>
     {
         #region Fields
 

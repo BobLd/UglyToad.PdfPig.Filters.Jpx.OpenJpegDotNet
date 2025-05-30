@@ -3,7 +3,7 @@ namespace OpenJpegDotNet
     /// <summary>
     /// Defines the decompression parameters. This class cannot be inherited.
     /// </summary>
-    public sealed class DecompressionParameters : OpenJpegObject
+    internal sealed class DecompressionParameters : OpenJpegObject
     {
         #region Constructors
 

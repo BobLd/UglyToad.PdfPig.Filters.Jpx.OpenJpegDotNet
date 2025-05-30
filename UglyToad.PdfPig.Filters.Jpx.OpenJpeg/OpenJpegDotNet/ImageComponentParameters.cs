@@ -3,7 +3,7 @@ namespace OpenJpegDotNet
     /// <summary>
     /// Defines the component parameters. This class cannot be inherited.
     /// </summary>
-    public sealed class ImageComponentParameters : OpenJpegObject
+    internal sealed class ImageComponentParameters : OpenJpegObject
     {
 
         #region Constructors

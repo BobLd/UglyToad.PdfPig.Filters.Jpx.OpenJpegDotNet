@@ -3,7 +3,7 @@
     /// <summary>
     /// A class which has a pointer of native structure.
     /// </summary>
-    public abstract class OpenJpegObject : IDisposable
+    internal abstract class OpenJpegObject : IDisposable
     {
 
         #region Constructors

@@ -1,6 +1,6 @@
 ﻿namespace OpenJpegDotNet
 {
-    public static partial class OpenJpeg
+    internal static partial class OpenJpeg
     {
         /// <summary>
         /// Creates a J2K/JP2 decompression structure.

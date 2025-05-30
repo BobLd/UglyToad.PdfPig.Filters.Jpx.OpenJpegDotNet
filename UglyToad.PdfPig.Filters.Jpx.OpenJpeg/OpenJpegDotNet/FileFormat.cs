@@ -3,7 +3,7 @@
     /// <summary>
     /// Specifies the supported codec.
     /// </summary>
-    public enum FileFormat
+    internal enum FileFormat
     {
         /// <summary>
         /// Specifies that the place-holder. 

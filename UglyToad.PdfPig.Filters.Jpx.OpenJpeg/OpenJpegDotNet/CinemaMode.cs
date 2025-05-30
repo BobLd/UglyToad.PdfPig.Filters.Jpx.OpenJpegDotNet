@@ -3,7 +3,7 @@
     /// <summary>
     /// Specifies the Digital cinema operation mode.
     /// </summary>
-    public enum CinemaMode
+    internal enum CinemaMode
     {
         /// <summary>
         /// Specifies that not Digital Cinema. 

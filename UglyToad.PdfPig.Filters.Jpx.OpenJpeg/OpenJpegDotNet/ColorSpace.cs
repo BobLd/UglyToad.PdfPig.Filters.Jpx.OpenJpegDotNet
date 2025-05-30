@@ -3,7 +3,7 @@
     /// <summary>
     /// Specifies the Supported image color spaces.
     /// </summary>
-    public enum ColorSpace
+    internal enum ColorSpace
     {
         /// <summary>
         /// Specifies that not supported by the library. 

@@ -4,7 +4,7 @@
     /// <summary>
     /// Specifies the region size capabilities.
     /// </summary>
-    public enum RegionSizeCapabilities
+    internal enum RegionSizeCapabilities
     {
 
         /// <summary>

@@ -3,7 +3,7 @@ namespace OpenJpegDotNet
     /// <summary>
     /// Defines the JPEG 2000 codec V2. This class cannot be inherited.
     /// </summary>
-    public sealed class Codec : OpenJpegObject
+    internal sealed class Codec : OpenJpegObject
     {
 
         #region Constructors

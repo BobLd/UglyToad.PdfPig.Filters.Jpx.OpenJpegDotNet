@@ -6,7 +6,7 @@ namespace OpenJpegDotNet
     /// <summary>
     /// Defines the raw bitmap image data. This class cannot be inherited.
     /// </summary>
-    public sealed class RawBitmap : OpenJpegObject
+    internal sealed class RawBitmap : OpenJpegObject
     {
 
         #region Constructors

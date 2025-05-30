@@ -3,7 +3,7 @@
     /// <summary>
     /// Provides the methods of OpenJpeg.
     /// </summary>
-    public static partial class OpenJpeg
+    internal static partial class OpenJpeg
     {
 
         /// <summary>

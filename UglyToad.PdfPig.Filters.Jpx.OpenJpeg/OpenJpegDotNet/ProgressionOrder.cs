@@ -4,7 +4,7 @@
     /// <summary>
     /// Specifies the progression order.
     /// </summary>
-    public enum ProgressionOrder
+    internal enum ProgressionOrder
     {
 
         /// <summary>
