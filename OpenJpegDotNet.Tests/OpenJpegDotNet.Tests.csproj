@@ -5,6 +5,8 @@
 		<IsPackable>false</IsPackable>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<Platforms>AnyCPU;x64;x86</Platforms>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\UglyToad.PdfPig.Filters.Jpx.OpenJpeg\UglyToad.PdfPig.Filters.Jpx.OpenJpeg.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
 
 	<ItemGroup>

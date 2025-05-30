@@ -10,7 +10,7 @@ namespace OpenJpegDotNet.Tests
 
         #region Methods
 
-        public void DisposeAndCheckDisposedState(OpenJpegObject obj)
+        internal void DisposeAndCheckDisposedState(OpenJpegObject obj)
         {
             if (obj == null)
                 return;
@@ -20,7 +20,7 @@ namespace OpenJpegDotNet.Tests
             Assert.True(obj.NativePtr == IntPtr.Zero);
         }
 
-        public void DisposeAndCheckDisposedStates(IEnumerable<OpenJpegObject> objs)
+        internal void DisposeAndCheckDisposedStates(IEnumerable<OpenJpegObject> objs)
         {
             foreach (var obj in objs)
                 this.DisposeAndCheckDisposedState(obj);
