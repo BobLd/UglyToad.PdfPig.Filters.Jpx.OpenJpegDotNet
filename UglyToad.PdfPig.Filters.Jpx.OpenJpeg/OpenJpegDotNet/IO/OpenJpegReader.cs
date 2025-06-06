@@ -2,8 +2,12 @@
 
 namespace OpenJpegDotNet.IO
 {
-    internal sealed class Reader : IDisposable
+    internal sealed class OpenJpegReader : IDisposable
     {
+        public static string GetVersion() => OpenJpeg.GetVersion();
+
+        public static string GetNativeVersion() => OpenJpeg.GetNativeVersion();
+
         #region Fields
 
         private readonly Buffer _Buffer;
@@ -28,7 +32,7 @@ namespace OpenJpegDotNet.IO
 
         #region Constructors
 
-        public Reader(ReadOnlySpan<byte> data)
+        public OpenJpegReader(ReadOnlySpan<byte> data)
         {
             this._Buffer = new Buffer
             {
@@ -196,7 +200,7 @@ namespace OpenJpegDotNet.IO
         #region IDisposable Members
 
         /// <summary>
-        /// Releases all resources used by this <see cref="Reader"/>.
+        /// Releases all resources used by this <see cref="OpenJpegReader"/>.
         /// </summary>
         public void Dispose()
         {
@@ -205,7 +209,7 @@ namespace OpenJpegDotNet.IO
         }
 
         /// <summary>
-        /// Releases all resources used by this <see cref="Reader"/>.
+        /// Releases all resources used by this <see cref="OpenJpegReader"/>.
         /// </summary>
         /// <param name="disposing">Indicate value whether <see cref="IDisposable.Dispose"/> method was called.</param>
         private void Dispose(bool disposing)

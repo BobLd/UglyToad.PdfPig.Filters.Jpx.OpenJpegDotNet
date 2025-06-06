@@ -1,5 +1,6 @@
 ﻿using System.Buffers.Binary;
 using OpenJpegDotNet;
+using OpenJpegDotNet.IO;
 using UglyToad.PdfPig.Tokens;
 
 namespace UglyToad.PdfPig.Filters.Jpx.OpenJpeg
@@ -12,15 +13,30 @@ namespace UglyToad.PdfPig.Filters.Jpx.OpenJpeg
     /// </summary>
     public sealed class OpenJpegJpxDecodeFilter : IFilter
     {
+        private const string OpenJpegLibVersion = "2.5.2";
+
         /// <inheritdoc/>
         public bool IsSupported => true;
 
+        /// <summary>
+        /// Create a new <see cref="OpenJpegJpxDecodeFilter"/>.
+        /// </summary>
+        /// <exception cref="Exception"></exception>
+        public OpenJpegJpxDecodeFilter()
+        {
+            string version = OpenJpegReader.GetVersion();
+            if (version != OpenJpegLibVersion)
+            {
+                throw new Exception($"Wrong native OpenJPEG library version. Expecting {OpenJpegLibVersion} but got {version}.");
+            }
+        }
+        
         /// <inheritdoc/>
         public Memory<byte> Decode(Memory<byte> input, DictionaryToken streamDictionary, IFilterProvider filterProvider, int filterIndex)
         {
             var codecFormat = GetCodecFormat(input.Span);
 
-            using (var reader = new OpenJpegDotNet.IO.Reader(input.Span))
+            using (var reader = new OpenJpegReader(input.Span))
             {
                 if (!reader.ReadHeader(codecFormat))
                 {

@@ -5,7 +5,6 @@ namespace OpenJpegDotNet
     /// </summary>
     internal sealed class Codec : OpenJpegObject
     {
-
         #region Constructors
 
         internal Codec(IntPtr ptr) :

@@ -20,13 +20,6 @@ namespace UglyToad.PdfPig.Filters.Jpx.OpenJpeg.Tests
         {
             Assert.True(Environment.Is64BitProcess);
             
-            var parsingOption = new ParsingOptions()
-            {
-                UseLenientParsing = true,
-                SkipMissingFonts = true,
-                FilterProvider = MyFilterProvider.Instance
-            };
-            
             using (var doc = PdfDocument.Open(Path.Combine(_path, "68-1990-01_A.pdf"), parsingOption))
             {
                 int i = 0;
@@ -50,17 +43,17 @@ namespace UglyToad.PdfPig.Filters.Jpx.OpenJpeg.Tests
             }
         }
 
+        private static ParsingOptions parsingOption = new ParsingOptions()
+        {
+            UseLenientParsing = true,
+            SkipMissingFonts = true,
+            FilterProvider = MyFilterProvider.Instance
+        };
+
         [Theory]
         [MemberData(nameof(GetAllDocuments))]
         public void RenderImages(string docPath)
         {
-            var parsingOption = new ParsingOptions()
-            {
-                UseLenientParsing = true,
-                SkipMissingFonts = true,
-                FilterProvider = MyFilterProvider.Instance
-            };
-
             string fileRootName = Path.ChangeExtension(Path.GetFileName(docPath), "");
 
             bool isDocumentJpx = false;
